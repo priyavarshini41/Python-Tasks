@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Report Generator</title>
+
+    <link rel="stylesheet"
+    href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Student Report Generator</h1>
+
+<p>Upload student CSV file and generate PDF report</p>
+
+<form
+action="/generate"
+method="POST"
+enctype="multipart/form-data"
+>
+
+<input type="file"
+name="file"
+id="fileInput"
+required>
+
+<button type="submit">
+Generate PDF
+</button>
+
+</form>
+
+<div id="preview"></div>
+
+</div>
+
+<script src=
+"{{url_for('static',filename='script.js')}}">
+</script>
+
+</body>
+</html>
